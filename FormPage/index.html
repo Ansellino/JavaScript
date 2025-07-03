@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Registrasi Lengkap</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-wrapper">
+        <h1 class="form-title">Form Registrasi</h1>
+        <p class="form-subtitle">Silakan lengkapi data diri Anda</p>
+
+        <form id="registrationForm" novalidate>
+          <!-- Data Pribadi -->
+          <div class="form-section">
+            <h2 class="section-title">Data Pribadi</h2>
+
+            <div class="form-group">
+              <label for="fullName"
+                >Nama Lengkap <span class="required">*</span></label
+              >
+              <input type="text" id="fullName" name="fullName" required />
+              <span class="error-message"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required />
+                <span class="error-message"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="phone"
+                  >Nomor Telepon <span class="required">*</span></label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="08xx-xxxx-xxxx"
+                  required
+                />
+                <span class="error-message"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="birthDate"
+                  >Tanggal Lahir <span class="required">*</span></label
+                >
+                <input type="date" id="birthDate" name="birthDate" required />
+                <span class="error-message"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="gender"
+                  >Jenis Kelamin <span class="required">*</span></label
+                >
+                <select id="gender" name="gender" required>
+                  <option value="">Pilih jenis kelamin</option>
+                  <option value="male">Laki-laki</option>
+                  <option value="female">Perempuan</option>
+                </select>
+                <span class="error-message"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alamat -->
+          <div class="form-section">
+            <h2 class="section-title">Alamat</h2>
+
+            <div class="form-group">
+              <label for="address"
+                >Alamat Lengkap <span class="required">*</span></label
+              >
+              <textarea
+                id="address"
+                name="address"
+                rows="3"
+                required
+              ></textarea>
+              <span class="error-message"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">Kota <span class="required">*</span></label>
+                <input type="text" id="city" name="city" required />
+                <span class="error-message"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="province"
+                  >Provinsi <span class="required">*</span></label
+                >
+                <select id="province" name="province" required>
+                  <option value="">Pilih provinsi</option>
+                  <option value="dki-jakarta">DKI Jakarta</option>
+                  <option value="jawa-barat">Jawa Barat</option>
+                  <option value="jawa-tengah">Jawa Tengah</option>
+                  <option value="jawa-timur">Jawa Timur</option>
+                  <option value="banten">Banten</option>
+                  <option value="other">Lainnya</option>
+                </select>
+                <span class="error-message"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="postalCode"
+                  >Kode Pos <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="postalCode"
+                  name="postalCode"
+                  maxlength="5"
+                  required
+                />
+                <span class="error-message"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Informasi Akun -->
+          <div class="form-section">
+            <h2 class="section-title">Informasi Akun</h2>
+
+            <div class="form-group">
+              <label for="username"
+                >Username <span class="required">*</span></label
+              >
+              <input type="text" id="username" name="username" required />
+              <span class="error-message"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="password"
+                  >Password <span class="required">*</span></label
+                >
+                <div class="password-wrapper">
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="toggle-password"
+                    data-target="password"
+                  >
+                    <span class="eye-icon">👁️</span>
+                  </button>
+                </div>
+                <span class="error-message"></span>
+                <div class="password-strength">
+                  <div class="strength-bar"></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="confirmPassword"
+                  >Konfirmasi Password <span class="required">*</span></label
+                >
+                <div class="password-wrapper">
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="toggle-password"
+                    data-target="confirmPassword"
+                  >
+                    <span class="eye-icon">👁️</span>
+                  </button>
+                </div>
+                <span class="error-message"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Booking -->
+          <div class="form-section">
+            <h2 class="section-title">Booking:</h2>
+
+            <div class="form-group">
+              <label>Hari apa? </label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interests" value="senin" />
+                  <span>Senin</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interests" value="selasa" />
+                  <span>Selasa</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interests" value="rabu" />
+                  <span>Rabu</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interests" value="kamis" />
+                  <span>Kamis</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interests" value="jumat" />
+                  <span>Jumat</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="newsletter">Kirimkan rekaman isian form ke email?</label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="newsletter" value="yes" checked />
+                  <span>Ya, Kirimkan ke email</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="newsletter" value="no" />
+                  <span>Tidak, terima kasih./span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Terms and Conditions -->
+          <div class="form-section">
+            <div class="form-group">
+              <label class="checkbox-label terms">
+                <input type="checkbox" id="terms" name="terms" required />
+                <span
+                  >Saya menyetujui
+                  <a href="#" class="link">Syarat dan Ketentuan</a> serta
+                  <a href="#" class="link">Kebijakan Privasi</a>
+                  <span class="required">*</span></span
+                >
+              </label>
+              <span class="error-message"></span>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-actions">
+            <button type="reset" class="btn btn-secondary">Reset</button>
+            <button type="submit" class="btn btn-primary">
+              Daftar Sekarang
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Registrasi Berhasil!</h3>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Data Anda telah berhasil disimpan.</p>
+          <div id="submittedData"></div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary modal-close">Tutup</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
