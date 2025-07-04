@@ -17,7 +17,7 @@ const map2 = new Map();
 map2.set(1, "number one");
 console.log(map2); // Output: Map(1) { 1 => 'number one' }
 
-// Mengakses Niali di Map
+// Mengakses Nilai di Map
 const map3 = new Map();
 map3.set("name", "aras");
 console.log(map3.get("name")); // Output: aras
