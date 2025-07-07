@@ -19,3 +19,9 @@ Mari kita lihat contoh di aplikasi nyata yang Anda gunakan. Misalnya, Anda ingin
 ![alt text](image-1.png)
 
 Secara umum, bahasa pemrograman (khususnya JavaScript) memiliki flow control yang terdiri dari: conditional, looping, dan error handling. Kita akan bahas satu per satu mulai dari conditional hingga error handling secara tuntas di materi selanjutnya. Staylearning, ya!
+
+# Error Handling
+
+## Try-catch
+
+![alt text](image-5.png)
