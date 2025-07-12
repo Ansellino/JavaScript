@@ -12,3 +12,4 @@ const result3 = addWith(result2, 10); // Output: 16
 console.log(`result3: ${result3} is ${result3}`); // Output: result3: 16 is 16
 
 console.log(result1, result2, result3); // Output: 5 6 16
+
