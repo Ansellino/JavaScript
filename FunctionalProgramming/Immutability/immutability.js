@@ -16,9 +16,32 @@ Array.sort: mengurutkan elemen dari sebuah array.
 Object.assign: memodifikasi properti dari object.
  */
 
+/**
+ * Finds the maximum value in an array of numbers.
+ * 
+ * Mechanism:
+ * 1. The sort() method arranges array elements in ascending order (a - b)
+ * 2. When (a - b) returns negative: a comes before b
+ * 3. When (a - b) returns positive: b comes before a  
+ * 4. When (a - b) returns zero: order remains unchanged
+ * 5. After sorting, pop() removes and returns the last element (highest value)
+ * 
+ * Note: This function mutates the original array due to sort() method.
+ * For immutable approach, consider using [...arrayOfNumbers].sort() or Math.max()
+ * 
+ * @param {number[]} arrayOfNumbers - An array of numbers to find the maximum from
+ * @returns {number|undefined} The maximum number in the array, or undefined if array is empty
+ * 
+ * @example
+ * max([3, 1, 4, 1, 5]); // returns 5
+ * max([]); // returns undefined
+ * max([42]); // returns 42
+ */
+
 function max(arrayOfNumbers) {
     return arrayOfNumbers.sort((a, b) => a - b).pop();
 }
+
 
 const numbers = [10, 23, 24, 7, 42, 10];
 const largest = max(numbers);
