@@ -54,3 +54,5 @@ kita akan belajar metode penanganan asynchronous process dalam JavaScript, mulai
 hingga terkini.
 
 Oke, sudahkah Anda siap? Mari kita mulai.
+
+![alt text](image.png)
