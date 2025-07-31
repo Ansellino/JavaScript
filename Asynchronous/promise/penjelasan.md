@@ -45,3 +45,6 @@ Mari kita ambil contoh tugas mencuci pakaian pada mesin cuci. Bayangkan saja mes
 Promise pada akhirnya akan diselesaikan. Tugas kita sebagai developer adalah memberikan kode logika untuk menangani jika proses masuk ke fulfilled atau terjadi kesalahan (rejected).
 
 Sip! Anda sudah paham mengenai konsep Promise dalam JavaScript dan berikutnya kita akan praktik!
+
+Youtube Concurrency:
+https://www.youtube.com/watch?v=kGu_caRJ-hw&t=2s
